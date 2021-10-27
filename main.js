@@ -40,7 +40,7 @@ function gotresult(error, results) {
         Prediction1=results[0].label;
         Prediction2=results[1].label;
         speak();
-        if (results[0].label=="Rock and rool symbol") {
+        if (results[0].label=="Rock and roll symbol") {
             document.getElementById("update_emoji").innerHTML="&#129304;";
         }
         if (results[0].label=="Peace symbol") {
@@ -49,7 +49,7 @@ function gotresult(error, results) {
         if (results[0].label=="Thumbs symbol") {
             document.getElementById("update_emoji").innerHTML="&#128076;";
         }
-        if (results[1].label=="Rock and rool symbol") {
+        if (results[1].label=="Rock and roll symbol") {
             document.getElementById("update_emoji2").innerHTML="&#129304;";
         }
         if (results[1].label=="Peace symbol") {
