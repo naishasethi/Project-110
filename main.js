@@ -25,3 +25,38 @@ function speak() {
     var utterThis=new SpeechSynthesisUtterance(speakdata1+speakdata2);
     synth.speak(utterThis);
 }
+function check() {
+    img=document.getElementById("capture_img");
+    classifier.classify(img, gotresult);
+}
+function gotresult(error, results) {
+    if (error) {
+        console.log(error);
+    }
+    else {
+        console.log(results);
+        document.getElementById("result_emotion_name").innerHTML=results[0].label;
+        document.getElementById("result_emotion_name2").innerHTML=results[1].label;
+        Prediction1=results[0].label;
+        Prediction2=results[1].label;
+        speak();
+        if (results[0].label=="Rock and rool symbol") {
+            document.getElementById("update_emoji").innerHTML="&#129304;";
+        }
+        if (results[0].label=="Peace symbol") {
+            document.getElementById("update_emoji").innerHTML="&#128077;";
+        }
+        if (results[0].label=="Thumbs symbol") {
+            document.getElementById("update_emoji").innerHTML="&#128076;";
+        }
+        if (results[1].label=="Rock and rool symbol") {
+            document.getElementById("update_emoji2").innerHTML="&#129304;";
+        }
+        if (results[1].label=="Peace symbol") {
+            document.getElementById("update_emoji2").innerHTML="&#128077;;";
+        }
+        if (results[1].label=="Thumbs symbol") {
+            document.getElementById("update_emoji2").innerHTML="&#128076;";
+        }
+    }
+}
