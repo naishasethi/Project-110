@@ -53,7 +53,7 @@ function gotresult(error, results) {
             document.getElementById("update_emoji2").innerHTML="&#129304;";
         }
         if (results[1].label=="Peace symbol") {
-            document.getElementById("update_emoji2").innerHTML="&#128077;;";
+            document.getElementById("update_emoji2").innerHTML="&#128077;";
         }
         if (results[1].label=="Thumbs Up") {
             document.getElementById("update_emoji2").innerHTML="&#128076;";
