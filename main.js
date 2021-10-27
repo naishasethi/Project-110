@@ -46,7 +46,7 @@ function gotresult(error, results) {
         if (results[0].label=="Peace symbol") {
             document.getElementById("update_emoji").innerHTML="&#128077;";
         }
-        if (results[0].label=="Thumbs symbol") {
+        if (results[0].label=="Thumbs Up") {
             document.getElementById("update_emoji").innerHTML="&#128076;";
         }
         if (results[1].label=="Rock and roll symbol") {
@@ -55,7 +55,7 @@ function gotresult(error, results) {
         if (results[1].label=="Peace symbol") {
             document.getElementById("update_emoji2").innerHTML="&#128077;;";
         }
-        if (results[1].label=="Thumbs symbol") {
+        if (results[1].label=="Thumbs Up") {
             document.getElementById("update_emoji2").innerHTML="&#128076;";
         }
     }
